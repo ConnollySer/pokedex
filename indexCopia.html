@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex-Web</title>
+    <link rel="icon" href="img/logos/pokedexLogo2.jpg">
+    <link rel="stylesheet" href="estiloPokedexCopia.css">
+</head>
+<body id="body">
+    <img id="logoPokemon" src="img/logos/poke-transparente.png">
+    <div id="tapa1"></div>
+    <div id="tapa2"></div>
+    <main>
+        
+         <div id="contenedorPrincipal">
+            <input tabindex="1" id="buscador" placeholder="Intruduce un Pokémon" name="buscadorPoke">
+            <div id="contenedorImagen" >
+                <img id="imagenPortada" src="img/personajes/Profesor_Oak2.png" style="scale: 1.5; transform: translateY(4.2em)" >
+            </div>
+            <div id="contenedorInfo"><p>¡Bienvenido a la Pokedex-Web!</p></div>
+            
+        </div>
+        <div id="contenedorBotones">
+            <button tabindex="2" type="submit" id="btnBuscar">Buscar</button>
+            <button tabindex="3" id="btnFiltrar" >Filtrar</button>
+            <button tabindex="4" id="btnShiny" >Shiny</button>
+            <button tabindex="5" id="btnCombate" >Combate</button>
+            <button  tabindex="6" id="btnSalir" >Salir</button>
+        </div>
+    </main>
+    <footer id="footerId">
+        <p id="footer">Pokedex desarrollada por Sergio Connolly Peña &copy; 2025 Trabajo Final de Grado. FOC</p>
+    </footer>
+    <script src="js/jquery-3.7.1.min.js""></script>
+    <script src="jsCopia.js"></script>
+  
+</body>
+</html>

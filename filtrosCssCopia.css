@@ -1,0 +1,341 @@
+/* Estilos generales */
+
+@font-face {
+    font-family: "pokemonRetro";
+    src: url(fuentes/PokemonClassic.ttf);
+}
+
+@font-face {
+    font-family: rellena;
+    src: url(fuentes/GeneraleMonoA.otf);
+}
+
+body {
+    align-items: center;
+    background-color: #f0f0f0;
+    background-image: url(img/marcos/patronPokeball.jpg);
+    display: flex;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh; /* Centra la Pokédex verticalmente */
+    padding: 0;
+}
+
+button{
+  
+    background-color: #007bff; /* Color azul para los botones */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-family: pokemonRetro;
+    font-size: 1.0em;
+    letter-spacing: 0.2em;
+    padding: 10px;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+#btnTipo{
+    font-family:"rellena"; 
+    font-size: 1.6em;
+    background-image: url('img/logos/tipo1.png');
+    background-size: contain; /* o 'cover' */
+    background-position: center; /* Centra la imagen */
+    color: black;
+ 
+
+}
+
+
+#btnNumero{
+    font-family:"rellena"; 
+    font-size: 1.6em;
+    background-image: url('img/logos/unk.png') ;
+    background-size: contain;
+    background-position: center;
+    background-color: #ccc;
+    color: black;
+}
+
+#btnGeneraciones{
+    font-family:"rellena"; 
+    font-size: 1.6em;
+    background-image: url('img/logos/generaciones.png') ;
+    background-size: contain;
+    background-position: center;
+    color: black;
+    border-color: #333;
+   
+  
+    
+}
+
+#btnHuevo{
+    font-family:"rellena"; 
+    font-size: 1.6em;
+    background-image: url('img/logos/eggs-list.png') ;
+    background-size: contain;
+    background-position: center;
+    color:black;
+}
+
+
+#btnBuscar,#btnShiny,#btnSalir {
+    background-color: #007bff; /* Color azul para los botones */
+    border: none;
+    border-radius: 0.5em;
+    color: white;
+    cursor: pointer;
+    font-family: pokemonRetro;
+    font-size: 1.0em;
+    letter-spacing: 0.2em;
+    padding: 10px;
+    transition: background-color 0.3s ease; /* Transición suave */
+    text-decoration: none;
+    
+}
+
+
+#btnHuevo:hover,
+#btnGeneraciones:hover,
+#btnTipo:hover,
+#btnNumero:hover{
+    transform: scale(1.05);
+}
+
+#btnBuscar:hover,
+#btnShiny:hover,
+#btnSalir:hover {
+    background-color: #0056b3; /* Color azul más oscuro */
+}
+
+footer {
+    background-color: #333;
+    bottom: 0;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 998;
+}
+
+#buscador {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    left: 50%;
+    padding: 8px;
+    position: absolute;
+    top: -50px; /* Posicionado por encima de los divs */
+    transform: translateX(-50%);
+    width: 300px;
+    z-index: 10;
+    text-align: center;
+    font-family:pokemonRetro;
+}
+
+#contenedorBotones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em; /* Espacio entre los botones */
+    margin-top: 2em;
+    justify-content: center;
+
+}
+
+#contenedorImagen {
+    background-color: #e0e0e0; /* Color de fondo de la pantalla */
+    border: 1px solid black;
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra interior para efecto de pantalla */
+    flex: 0 0 60%; /* Ocupa el 60% del espacio (pantalla grande) */
+    height: 25.5em; /* Establece una altura fija para el contenedor */
+    overflow: hidden; /* Evita que el contenido se desborde */
+    padding: 20px;
+    text-align: center;
+    overflow-y: auto;
+}
+
+#contenedorImagen img {
+    margin-top: 1em;
+    max-height: 400px; /* Establece una altura máxima para la imagen */
+    max-width: 100%; /* La imagen no será más ancha que su contenedor */
+    object-fit: contain;
+    overflow-y: auto;
+}
+
+#contenedorInfo {
+    background-color: #e0e0e0; /* Color de fondo de la pantalla */
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-height: 100%; /* Ajusta según sea necesario */
+    padding: 10px;
+    width: 20em;
+    display:grid;
+    gap: 1em;
+    
+}
+
+#contenedorPrincipal {
+    align-items: stretch; /* Asegura que los elementos hijos se estiren correctamente */
+    background-color: #f8efef; /* Fondo blanco para el interior */
+    border-radius: 10px; /* Esquinas redondeadas */
+    display: flex;
+    gap: 25px; /* Aumentado el espacio entre la pantalla y los controles */
+    max-height: 900px;
+    padding: 30px; /* Aumentado el padding */
+    position: relative; /* Para posicionar el input dentro de este contenedor */
+}
+
+#imgSprite:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+#logoPokemon{
+    z-index: 998;
+    transition: transform 1s ease-in-out;
+    width: 30em;
+    height: 18em;
+}
+
+main {
+    background-color: #e21b1b; /* Color rojo de la Pokédex */
+    border: 10px solid #b71c1c; /* Borde grueso */
+    border-radius: 20px; /* Esquinas redondeadas */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra para efecto 3D */
+    margin-bottom: 8em; /* Espacio suficiente debajo del header */
+    margin-top: 6em;
+    max-width: 63em; /* Aumentado el ancho máximo */
+    padding: 60px; /* Aumentado el padding */
+    position: fixed;
+    width: 100%; /* Ancho de la Pokédex */
+    z-index: 1;
+}
+
+p, ul {
+    font-family: "pokemonRetro";
+    text-align: center;
+}
+
+
+
+
+#tapa1 {
+    background-color: #b71c1c;
+    border: 5px solid black;
+    border-radius: 5px;
+    height: 45em;
+    margin-bottom: 1.8em;
+    position: absolute; /* Sacarlos del flujo */
+    transform: translateX(31vh);
+    width: 35.75em;
+    z-index: 997;
+    border-left: 0;
+    transition: transform 1s ease;
+    
+    
+}
+
+
+
+#tapa2 {
+    background-color: #b71c1c;
+    border: 5px solid black;
+    border-radius: 5px;
+    float: right;
+    height: 45em;
+    margin-bottom: 1.8em;
+    position: absolute;
+    transform: translateX(-31vh);
+    width: 35.75em;
+    z-index: 997;
+    border-right: 0;
+    transition: transform 1s ease;
+}
+
+.poke-miniatura {
+    width: 100px;
+    margin: 8px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+.poke-miniatura:hover {
+    transform: scale(1.2);
+}
+
+
+/* Media Queries para hacerlo responsivo */
+@media (max-width: 768px) {
+    #buscador {
+        left: auto; /* Quitar posición fija */
+        margin-bottom: 20px; /* Espacio entre el buscador y los demás elementos */
+        position: static; /* Quitar posición absoluta */
+        transform: none; /* Quitar transformación */
+        width: 100%; /* Ocupar todo el ancho */
+    }
+
+    #contenedorImagen {
+        flex: 1 1 100%; /* Ocupar todo el ancho */
+        height: auto; /* Altura automática en móviles */
+        margin-bottom: 20px; /* Espacio entre la imagen y los controles */
+    }
+
+    #contenedorPrincipal {
+        flex-direction: column; /* Apilar elementos verticalmente */
+        gap: 20px; /* Reducir el espacio entre elementos */
+        padding: 20px; /* Reducir el padding */
+    }
+
+
+    main {
+        max-width: 100%; /* Ocupar todo el ancho disponible */
+        padding: 20px; /* Reducir el padding */
+        position: relative; /* modificadoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo */
+    }
+
+    footer{
+        display: none;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #buscador {
+        left: 50%; /* Mantener centrado */
+        transform: translateX(-50%); /* Mantener centrado */
+        width: 80%; /* Ajustar el ancho del buscador */
+    }
+
+    #contenedorImagen {
+        flex: 0 0 50%; /* Reducir el ancho de la imagen */
+    }
+
+    #contenedorPrincipal {
+        gap: 20px; /* Reducir el espacio entre elementos */
+        padding: 20px; /* Reducir el padding */
+    }
+
+    #conteInfobtn {
+        flex: 0 0 40%; /* Reducir el ancho de los controles */
+        position: relative; /* modificadoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo */
+    }
+
+    main {
+        max-width: 90%; /* Ajustar el ancho máximo */
+        padding: 40px; /* Ajustar el padding */
+        position: relative;  /* modificadoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo */
+    }
+    footer{
+        display: none;
+    }
+}
+
+@media (min-width: 1025px) {
+    /* Mantener el diseño original */
+}
